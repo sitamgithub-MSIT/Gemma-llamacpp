@@ -1,0 +1,5 @@
+huggingface_hub
+scikit-build-core
+llama-cpp-python
+llama-cpp-agent
+gradio
