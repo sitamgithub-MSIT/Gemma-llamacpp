@@ -29,13 +29,19 @@ To get started with this project, follow the steps below:
 1. Clone the repository: `git clone https://github.com/sitamgithub-MSIT/Gemma-llamacpp.git`
 2. Change the directory: `cd Gemma-llamacpp`
 3. Create a virtual environment: `python -m venv tutorial-env`
-4. Activate the virtual environment: `tutorial-env\Scripts\activate`
+4. Activate the virtual environment:
+   - For Linux/Mac: `source tutorial-env/bin/activate`
+   - For Windows: `tutorial-env\Scripts\activate`
 5. Install the required dependencies: `pip install -r requirements.txt`
 6. Run the Gradio application: `python app.py`
 
-Now, you can open up your local host and see the web application running. For more information, please refer to the Gradio documentation [here](https://www.gradio.app/docs/interface). Also, a live version of the application can be found [here](https://huggingface.co/spaces/sitammeur/Gemma-llamacpp).
+Note: You need a Hugging Face access token to run the application. You can get the token by signing up on the Hugging Face website and creating a new token from the settings page. After getting the token, you can set it as an environment variable `HUGGINGFACE_TOKEN` in your system by creating a `.env` file in the project's root directory. Replace the values with your API key.
 
-Note: You need a Hugging Face access token to run the application. You can get the token by signing up on the Hugging Face website and creating a new token from the settings page. After getting the token, you can set it as an environment variable `HUGGINGFACE_TOKEN` in your system by creating a `.env` file in the project's root directory.
+```bash
+HUGGINGFACE_TOKEN=your_token_here
+```
+
+Now, you can open up your local host and see the web application running. For more information, please refer to the Gradio documentation [here](https://www.gradio.app/docs/interface). Also, a live version of the application can be found [here](https://huggingface.co/spaces/sitammeur/Gemma-llamacpp).
 
 ## Contributing
 
