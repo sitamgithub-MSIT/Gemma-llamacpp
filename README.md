@@ -1,6 +1,6 @@
 # Gemma Llama.cpp
 
-Google released **[Gemma 3](https://blog.google/technology/developers/gemma-3/)**, a family of multimodal models that offers advanced capabilities like large context and multilingual support. This interactive chat interface allows you to experiment with the [`gemma-3-1b-it`](https://huggingface.co/google/gemma-3-1b-it) text model using various prompts and generation parameters. Users can select different model variants (GGUF format), system prompts, and observe generated responses in real-time. Key generation parameters, such as ⁣`temperature`, `max_tokens`, `top_k` and others are exposed below for tuning model behavior. For a detailed technical walkthrough, please refer to the accompanying **[blog post](https://sitammeur.medium.com/build-your-own-gemma-3-chatbot-with-gradio-and-llama-cpp-46457b22a28e)**.
+Google released **[Gemma 3](https://blog.google/technology/developers/gemma-3/)**, a family of multimodal models that offers advanced capabilities like large context and multilingual support. This interactive chat interface allows you to experiment with the [`gemma-3-1b-it`](https://huggingface.co/google/gemma-3-1b-it) text model using various prompts and generation parameters. Users can select different model variants (GGUF format), system prompts, and observe generated responses in real-time. Key generation parameters, such as ⁣`temperature`, `max_tokens`, `top_k`, and others, are exposed below for tuning model behavior. For a detailed technical walkthrough, please refer to the accompanying **[blog post](https://sitammeur.medium.com/build-your-own-gemma-3-chatbot-with-gradio-and-llama-cpp-46457b22a28e)**.
 
 ## Project Structure
 
@@ -45,7 +45,7 @@ Now, you can open up your local host and see the web application running. For mo
 
 ## Deployment
 
-The application is deployed on Hugging Face Spaces, and you can access it [here](https://huggingface.co/spaces/sitammeur/Gemma-llamacpp). You can host Gradio demo permanently on the internet using [Hugging Face Spaces](https://huggingface.co/spaces).
+The application is deployed on Hugging Face Spaces, and you can access it [here](https://huggingface.co/spaces/sitammeur/Gemma-llamacpp). You can host a Gradio demo permanently on the internet using [Hugging Face Spaces](https://huggingface.co/spaces).
 
 After creating a free Hugging Face account, you can deploy your Gradio app with two methods:
 
@@ -66,7 +66,7 @@ After creating a free Hugging Face account, you can deploy your Gradio app with 
 To use the application, follow these steps:
 
 1. Open the Gradio interface in your web browser.
-2. Select the GGUF model variant you want to use from the dropdown menu. The available options are `google_gemma-3-1b-it-Q6_K.gguf`, and `google_gemma-3-1b-it-Q5_K_M.gguf`.
+2. Select the GGUF model variant you want to use from the dropdown menu. The available options are `google_gemma-3-1b-it-Q6_K.gguf` and `google_gemma-3-1b-it-Q5_K_M.gguf`.
 3. Enter your prompt in the text box provided.
 4. Adjust the generation parameters as needed. The available parameters are:
    - `system_prompt`: The system prompt that sets the context for the model. You can leave it default or rewrite it as per your requirement.
@@ -75,19 +75,19 @@ To use the application, follow these steps:
    - `top_k`: The number of highest probability vocabulary tokens to keep for top-k sampling.
    - `top_p`: The cumulative probability of parameter options to keep for nucleus sampling.
    - `repetition_penalty`: The parameter for repetition penalty.
-5. Click the "Send" button to generate a response from the model and "Stop" button to stop the generation process.
+5. Click the "Send" button to generate a response from the model and the "Stop" button to stop the generation process.
 6. The generated response will be displayed in the chat interface above the input box as conversation history.
 7. You can also Undo, Retry, and Delete the conversation history in the chat interface:
    - "Undo" will remove the last message from the conversation history.
-   - "Retry" will regenerate the response for the last message in the conversation history.
+   - "Retry" will regenerate the response to the conversation history's last message.
    - "Delete" will reset the chat history and start a new conversation.
 8. You can also share the generated response as a text file by clicking the "Download" button.
-9. You can also copy message from both the user and the AI by clicking the "Copy message" icon next to the message. This will copy the message to your clipboard.
-10. You can also edit user message by clicking the "Edit" icon next to the message. This will open a text box where you can edit the message. After editing, save the changes.
+9. You can also copy a message from both the user and the AI by clicking the "Copy message" icon next to the message. This will copy the message to your clipboard.
+10. You can also edit a user message by clicking the "Edit" icon next to the message. This will open a text box where you can edit the message. After editing, save the changes.
 
 ## Results
 
-The chat interface allows user to interact with the Gemma 3 model in real-time. You can enter your prompts and adjust the generation parameters to see how the model responds. For results, refer to the `assets/` directory for the output screenshots, which show the chat interface in action.
+The chat interface allows users to interact with the Gemma 3 model in real time. You can enter your prompts and adjust the generation parameters to see how the model responds. For results, refer to the `assets/` directory for the output screenshots, which show the chat interface in action.
 
 ## Contributing
 
