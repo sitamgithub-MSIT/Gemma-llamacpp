@@ -2,6 +2,10 @@
 
 Google released **[Gemma 3](https://blog.google/technology/developers/gemma-3/)**, a family of multimodal models that offers advanced capabilities like large context and multilingual support. This interactive chat interface allows you to experiment with the [`gemma-3-1b-it`](https://huggingface.co/google/gemma-3-1b-it) text model using various prompts and generation parameters. Users can select different model variants (GGUF format), system prompts, and observe generated responses in real-time. Key generation parameters, such as ⁣`temperature`, `max_tokens`, `top_k`, and others, are exposed below for tuning model behavior. For a detailed technical walkthrough, please refer to the accompanying **[blog post](https://sitammeur.medium.com/build-your-own-gemma-3-chatbot-with-gradio-and-llama-cpp-46457b22a28e)**.
 
+Below is a screenshot of the application in action:
+
+![Gemma Llama.cpp](assets/demo1.png)
+
 ## Project Structure
 
 The project is structured as follows:
