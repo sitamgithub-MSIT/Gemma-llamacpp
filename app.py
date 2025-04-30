@@ -28,7 +28,7 @@ if not os.path.exists("./models"):
 
 hf_hub_download(
     repo_id="bartowski/google_gemma-3-1b-it-GGUF",
-    filename="google_gemma-3-1b-it-Q6_K.gguf",
+    filename="google_gemma-3-1b-it-Q4_K_M.gguf",
     local_dir="./models",
 )
 hf_hub_download(
@@ -73,7 +73,7 @@ llm_model = None
 def respond(
     message: str,
     history: List[Tuple[str, str]],
-    model: str = "google_gemma-3-1b-it-Q5_K_M.gguf",  # Set default model
+    model: str = "google_gemma-3-1b-it-Q4_K_M.gguf",  # Set default model
     system_message: str = "You are a helpful assistant.",
     max_tokens: int = 1024,
     temperature: float = 0.7,
@@ -105,7 +105,7 @@ def respond(
 
         # Ensure model is not None
         if model is None:
-            model = "google_gemma-3-1b-it-Q5_K_M.gguf"
+            model = "google_gemma-3-1b-it-Q4_K_M.gguf"
 
         # Load the model
         if llm is None or llm_model != model:
@@ -187,10 +187,10 @@ demo = gr.ChatInterface(
     additional_inputs=[
         gr.Dropdown(
             choices=[
-                "google_gemma-3-1b-it-Q6_K.gguf",
+                "google_gemma-3-1b-it-Q4_K_M.gguf",
                 "google_gemma-3-1b-it-Q5_K_M.gguf",
             ],
-            value="google_gemma-3-1b-it-Q5_K_M.gguf",
+            value="google_gemma-3-1b-it-Q4_K_M.gguf",
             label="Model",
             info="Select the AI model to use for chat",
         ),
